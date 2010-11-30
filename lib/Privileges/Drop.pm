@@ -16,7 +16,8 @@ POSIX groups.
 This module tries to simplify the process of dropping privileges. This can be
 useful when your Perl program needs to bind to privileged ports, etc. This
 module is much like Proc::UID, except that it's implemented in pure Perl.
-
+Special care has been taken to also drop saved uid on platforms that support
+this, currently only test on on Linux.
 
 =head1 SYNOPSIS
   
