@@ -76,12 +76,12 @@ sub drop_uidgid {
     # in HP-UX to change saved uid is to call setuid()
     # when the effective uid is zero).
 
-    # Fix for HP-UX not allowing change of saved UID when effective uid is non zero
+    # Drop privileges to $uid and $gid for both effective and saved uid/gid
     ($GID) = split /\s/, $newgid;
     $EGID = $newgid;
     $EUID = $UID = $uid;
 
-    # Drop privileges to $uid and $gid for both effective and saved uid/gid
+    # To overwrite the saved UID on all platforms we need to do it twice
     ($GID) = split /\s/, $newgid;
     $EGID = $newgid;
     $EUID = $UID = $uid;
