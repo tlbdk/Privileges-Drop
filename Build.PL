@@ -10,7 +10,6 @@ my $builder = Module::Build->new(
     create_makefile_pl => 'passthrough',
     create_readme      => 1,
     requires => {
-        'perl'    => '>= 5.8.0',
         'Carp'    => 0,
         'English' => 0,
     },

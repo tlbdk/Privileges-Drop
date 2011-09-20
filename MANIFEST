@@ -12,3 +12,4 @@ t/perlcriticrc
 t/pod-coverage.t
 t/pod.t
 Makefile.PL
+META.json
