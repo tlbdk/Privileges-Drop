@@ -29,7 +29,7 @@ this, currently only test on on Linux.
   drop_uidgid(1000, 1000);
 
   # Drop privileges to user nobody looking up gid and uid with getpwname
-  # This also set the enviroment variables USER, LOGNAME, HOME and SHELL. 
+  # This also set the environment variables USER, LOGNAME, HOME and SHELL. 
   drop_privileges('nobody');
 
 =head1 METHODS
@@ -155,7 +155,7 @@ sub drop_privileges {
 
 =head1 NOTES
 
-As this module only uses Perl's build in function, it relies on them to work
+As this module only uses Perl's built-in functions, it relies on them to work
 correctly. That means setting $GID and $EGID should also call setgroups(),
 something that might not have been the case before Perl 5.004. So if you are 
 running an older version, Proc::UID might be a better choice.
